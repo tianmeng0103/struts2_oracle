@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!--struts2.0默认的配置文件 -->
+	<include file="struts-default.xml"></include>
+	<!-- 也可以加载其他的配置文件 -->
+	<!-- <include file="mystrutsconfig.xml"></include> -->
+	<!-- 添加package -->
+	<package  name="default" namespace="/"  extends="struts-default">
+	
+		<!-- 配置login.action -->
+		<action name="login" class="org.struts.action.adminaction.AdminAction" method="login">
+		     <result name="success" type="redirectAction">
+			<param name="actionName">showuser</param>
+			</result>
+			<result name="UserNotExist">/NoUser.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 配置register.action -->
+		<action name="register" class="org.struts.action.adminaction.AdminAction" method="register">
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 配置show.action -->
+		<action name="show" class="org.struts.action.adminaction.AdminAction" method="show">
+			<result name="success">/show.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 配置update.action -->
+		<action name="update" class="org.struts.action.adminaction.AdminAction" method="update">
+			<result name="success" type="redirectAction">
+			<param name="actionName">show</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 配置delete.action -->
+		<action name="delete" class="org.struts.action.adminaction.AdminAction" method="delete">
+			<result name="success" type="redirectAction">
+			<param name="actionName">show</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		
+		
+		
+		<!-- 配置showuser.action -->
+	
+			<action name="showuser" class="org.struts.useraction.UserAction" method="show1">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 配置deleteuser.action -->
+		<action name="deleteuser" class="org.struts.useraction.UserAction" method="delete1">
+			<result name="success" type="redirectAction">
+			<param name="actionName">showuser</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+			<!-- 配置updateuser.action -->
+		<action name="updateuser" class="org.struts.useraction.UserAction" method="update1">
+		 	<result name="success" type="redirectAction">
+			<param name="actionName">showuser</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+			<!-- 配置adduser.action -->
+		<action name="adduser" class="org.struts.useraction.UserAction" method="insert1">
+		 	<result name="success" type="redirectAction">
+			<param name="actionName">showuser</param>
+			</result>
+			<result name="error">/error.jsp</result>
+			
+		</action>
+
+	</package>
+	
+	
+</struts>    

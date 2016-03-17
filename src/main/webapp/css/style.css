@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+#body{
+	height:700px;
+   width:1200px;
+   margin:0 auto;
+}
+#header {
+height: 111px;
+width:100%;
+background:#b7b700;
+text-align:center;
+margin-left:auto; 
+margin-right:auto;
+line-height:111px; 
+}
+#header-1{
+	height: 90px;
+width:100%;
+background:#b7b700;
+text-align:center;
+margin-left:auto; 
+margin-right:auto;
+line-height:90px; 
+}
+#header-2{
+		height: 20px;
+       width:100%;
+	background:#b7b700;
+	text-align:right;
+	
+}
+#left{
+	width:27%;
+	height:300px;
+   margin-top:120px;
+background-image: url(../img/login1.png);
+
+	 float:left;
+}
+#right{
+
+	width:65%;
+	
+	float:right;
+}
+#table{
+	  margin-top:200px;
+	float:left;
+}
+#table1{
+	
+	   width:75%;
+	  margin-top:150px;
+	float:left;
+}
+#table2{
+	
+	   width:100%;
+	  margin-top:150px;
+	float:left;
+}
